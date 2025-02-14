@@ -11,8 +11,36 @@ function ingresarAmigo(){
     if(ingresoAmigo==''){
         alert('Por favor, inserte un nombre.');
     }else{
-        amigos.push();
+        amigos.push(ingresoAmigo);
         console.log(amigos);
+        document.getElementById('amigo').value= '';
     }
+}
+
+function asignarTextoDOM(elemento,texto){
+    let elementoDOM=document.querySelector(elemento);
+    elementoDOM.innerHTML=texto;
+    }
+
+function sortearAmigo(){
+     if(amigos.length==0){
+        alert('no se puede sortear con el campo vacio ');
+     } else{
+
+        let longitudAmigos= Math.floor(Math.random()*amigos.length);
+
+        let amigoSecreto=amigos[longitudAmigos];
+
+        console.log(amigoSecreto);
+
+        // alert (`tu amigo es ${amigoSecreto}`);
+        
+        asignarTextoDOM('p',`tu amigo es ${amigoSecreto}`)
+
+
+
+     }
+
+    
 }
 
