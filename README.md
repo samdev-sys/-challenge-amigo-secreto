@@ -21,4 +21,4 @@ Este es un proyecto web simple que permite realizar un sorteo de "Amigo Secreto"
 1. **Clona este repositorio** a tu máquina local usando:
    
    ```bash
-   git clone https://github.com/tu-usuario/amigo-secreto.git
+ https://github.com/samdev-sys/-challenge-amigo-secreto.git
