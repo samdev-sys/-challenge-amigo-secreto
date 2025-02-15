@@ -13,8 +13,22 @@ function ingresarAmigo(){
     }else{
         amigos.push(ingresoAmigo);
         console.log(amigos);
+
+        actualizarListaAmigos();
+
         document.getElementById('amigo').value= '';
     }
+}
+
+function actualizarListaAmigos(){
+    let listaAmigos =document.getElementById('listaAmigos');
+    listaAmigos.innerHTML = '';
+
+    amigos.forEach(function(amigo){
+        let li =document.createElement('li');
+        li.textContent=amigo;
+        listaAmigos.appendChild(li);
+    });
 }
 
 function asignarTextoDOM(elemento,texto){
@@ -23,7 +37,8 @@ function asignarTextoDOM(elemento,texto){
     }
 
 function sortearAmigo(){
-     if(amigos.length==0){
+     if(amigos.length==0)
+    {
         alert('no se puede sortear con el campo vacio ');
      } else{
 
@@ -35,12 +50,19 @@ function sortearAmigo(){
 
         // alert (`tu amigo es ${amigoSecreto}`);
         
-        asignarTextoDOM('p',`tu amigo es ${amigoSecreto}`)
+        asignarTextoDOM('p',`tu amigo secreto es ${amigoSecreto}`)
 
+    }
 
-
-     }
-
+   
+   
     
 }
+
+// function limpiar(){
+//     document.getElementById('amigo').value='';
+//     document.innerHTML('listaAmigos').value='';
+//     document.innerHTML('resultado').value='';
+// }
+
 
