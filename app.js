@@ -24,11 +24,11 @@ function actualizarListaAmigos(){
     let listaAmigos =document.getElementById('listaAmigos');
     listaAmigos.innerHTML = '';
 
-    amigos.forEach(function(amigo){
-        let li =document.createElement('li');
-        li.textContent=amigo;
-        listaAmigos.appendChild(li);
-    });
+   for (let i=0 ; i<amigos.length; i++){
+    let li =document.createElement('li');
+    li.textContent=amigos[i];
+    listaAmigos.appendChild(li);
+   }
 }
 
 function asignarTextoDOM(elemento,texto){
