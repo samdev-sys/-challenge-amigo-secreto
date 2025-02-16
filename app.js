@@ -59,10 +59,10 @@ function sortearAmigo(){
     
 }
 
-// function limpiar(){
-//     document.getElementById('amigo').value='';
-//     document.innerHTML('listaAmigos').value='';
-//     document.innerHTML('resultado').value='';
-// }
+function limpiar(){
+   amigos= [];
+   document.getElementById('listaAmigos').innerHTML ='';
+   document.querySelector('p').innerHTML ='';
+}
 
 
